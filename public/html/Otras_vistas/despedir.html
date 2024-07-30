@@ -1,0 +1,323 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Candidate Cards</title>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/style.css">
+    </head>
+
+    <body class="bg-gray-100">
+
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <h1>DREAMART</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Gestión de Personal</a>
+                            <ul class="submenu">
+                        
+                                <li><a href="../Vistas/login_con_des.html">Contratar</a></li>
+                                <li><a href="../Vistas/login_despedir.html">Despedir</a></li>
+                                <li><a href="../Vistas/ver_personal.html">Ver personal</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Ventas</a>
+                            <ul class="submenu">
+                                <li><a href="../Vistas/registrar_venta.html">Registrar Venta</a></li>
+                                <li><a href="../Vistas/hiatorial_venta.html">Historial de Ventas</a></li>
+                                <li><a href="../Vistas/reporte_ventas.html">Reporte de Ventas</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Inventario</a>
+                            <ul class="submenu">
+                                <li><a href="../Vistas/ver_inventario.html">Ver Inventario</a></li>
+                                <li><a href="../Vistas/reporte_inventario.html">Reporte de Inventario</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Recompensas</a>
+                            <ul class="submenu">
+                                <li><a href="#">Ver Recompensas</a></li>
+                                <li><a href="../Vistas/login_con_des.html">Asignar Recompensas</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Visualizaciones</a>
+                            <ul class="submenu">
+                                <li><a href="../Vistas/grafica.html">Gráficos</a></li>
+                                <li><a href="../Vistas/informes.html">Informes</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="contact">Configuración</a>
+                            <ul class="submenu">
+                                <li><a href="../Vistas/inicio_sesion.html">Cerrar Sesión</a></li>
+                                <li><a href="#">Preferencias</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+
+
+        <div class="overlay-container">
+            <img src="../img/auto2.png" alt="Background Image" class="w-full h-screen object-cover">
+            <div class="centered-text">
+                <h1 class="text-6xl font-bold">DESPEDIR EMPLEADOS</h1>
+                <p class="text-2xl mt-4">Aquí podrás despedir personal del área.</p>
+            </div>
+        </div><br><br>
+
+        <div >
+        
+
+            <h1 class="text-4xl font-bold mb-8 text-center">Lista de espera</h1><br><br>
+
+            <div class="flex justify-center mb-8">
+                <input type="text" id="searchInput" placeholder="Buscar por ID o Nombre"
+                    class="px-4 py-2 border rounded-md shadow-sm w-full max-w-xs">
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4" id="cardsContainer">
+                <!-- Example Card -->
+                <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white custom-card" data-id="1"
+                    data-name="John Doe">
+                    <img class="w-full" src="https://via.placeholder.com/400x200" alt="Candidate image">
+                    <div class="px-6 py-4">
+                        <div class="font-bold text-xl mb-2">John Doe</div>
+                        <p class="text-gray-700 text-base">
+                            <strong>Área:</strong> Web Development<br>
+                            <strong>Experiencia:</strong> 5 years<br>
+                            <strong>Expectativas:</strong> Full-time position<br>
+                            <strong>Celular:</strong> 123-456-7890<br>
+                            <strong>Email:</strong> john.doe@example.com
+                        </p>
+                    </div>
+                    <div class="px-6 pt-4 pb-2">
+                        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-2 custom-hire-btn"
+                            onclick="openModal('¿Seguro que desea despedir a este empleado?')">Depedir</button>
+                    </div>
+                </div>
+
+                <!-- Segunda Card -->
+                <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white custom-card" data-id="2"
+                    data-name="Jane Doe">
+                    <img class="w-full" src="https://via.placeholder.com/400x200" alt="Candidate image">
+                    <div class="px-6 py-4">
+                        <div class="font-bold text-xl mb-2">Angela Aguilar</div>
+                        <p class="text-gray-700 text-base">
+                            <strong>Área:</strong> Design<br>
+                            <strong>Experiencia:</strong> 3 years<br>
+                            <strong>Expectativas:</strong> Part-time position<br>
+                            <strong>Celular:</strong> 987-654-3210<br>
+                            <strong>Email:</strong> jane.doe@example.com
+                        </p>
+                    </div>
+                    <div class="px-6 pt-4 pb-2">
+                        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-2 custom-hire-btn"
+                            onclick="openModal('¿Seguro que desea despedir a este empleado?')">Depedir</button>
+                    </div>
+                </div>
+
+                <!-- Agrega más tarjetas según sea necesario -->
+
+                <!-- Example Card -->
+                <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white custom-card" data-id="1"
+                data-name="John Doe">
+                <img class="w-full" src="https://via.placeholder.com/400x200" alt="Candidate image">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">John Doe</div>
+                    <p class="text-gray-700 text-base">
+                        <strong>Área:</strong> Web Development<br>
+                        <strong>Experiencia:</strong> 5 years<br>
+                        <strong>Expectativas:</strong> Full-time position<br>
+                        <strong>Celular:</strong> 123-456-7890<br>
+                        <strong>Email:</strong> john.doe@example.com
+                    </p>
+                </div>
+                <div class="px-6 pt-4 pb-2">
+                    <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-2 custom-hire-btn"
+                        onclick="openModal('¿Seguro que desea despedir a este empleado?')">Depedir</button>
+                </div>
+            </div>
+
+
+
+            <!-- Example Card -->
+            <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white custom-card" data-id="1"
+            data-name="John Doe">
+            <img class="w-full" src="https://via.placeholder.com/400x200" alt="Candidate image">
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2">John Doe</div>
+                <p class="text-gray-700 text-base">
+                    <strong>Área:</strong> Web Development<br>
+                    <strong>Experiencia:</strong> 5 years<br>
+                    <strong>Expectativas:</strong> Full-time position<br>
+                    <strong>Celular:</strong> 123-456-7890<br>
+                    <strong>Email:</strong> john.doe@example.com
+                </p>
+            </div>
+            <div class="px-6 pt-4 pb-2">
+                <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-2 custom-hire-btn"
+                    onclick="openModal('¿Seguro que desea despedir a este empleado?')">Depedir</button>
+            </div>
+        </div>
+
+
+
+        <!-- Example Card -->
+        <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white custom-card" data-id="1"
+        data-name="John Doe">
+        <img class="w-full" src="https://via.placeholder.com/400x200" alt="Candidate image">
+        <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">John Doe</div>
+            <p class="text-gray-700 text-base">
+                <strong>Área:</strong> Web Development<br>
+                <strong>Experiencia:</strong> 5 years<br>
+                <strong>Expectativas:</strong> Full-time position<br>
+                <strong>Celular:</strong> 123-456-7890<br>
+                <strong>Email:</strong> john.doe@example.com
+            </p>
+        </div>
+        <div class="px-6 pt-4 pb-2">
+            <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-2 custom-hire-btn"
+                onclick="openModal('¿Seguro que desea despedir a este empleado?')">Depedir</button>
+        </div>
+    </div>
+
+
+        <!-- Example Card -->
+        <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white custom-card" data-id="1"
+        data-name="John Doe">
+        <img class="w-full" src="https://via.placeholder.com/400x200" alt="Candidate image">
+        <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">John Doe</div>
+            <p class="text-gray-700 text-base">
+                <strong>Área:</strong> Web Development<br>
+                <strong>Experiencia:</strong> 5 years<br>
+                <strong>Expectativas:</strong> Full-time position<br>
+                <strong>Celular:</strong> 123-456-7890<br>
+                <strong>Email:</strong> john.doe@example.com
+            </p>
+        </div>
+        <div class="px-6 pt-4 pb-2">
+            <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-2 custom-hire-btn"
+                onclick="openModal('¿Seguro que desea despedir a este empleado?')">Depedir</button>
+        </div>
+    </div>
+
+
+    <!-- Example Card -->
+    <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white custom-card" data-id="1"
+    data-name="John Doe">
+    <img class="w-full" src="https://via.placeholder.com/400x200" alt="Candidate image">
+    <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">John Doe</div>
+        <p class="text-gray-700 text-base">
+            <strong>Área:</strong> Web Development<br>
+            <strong>Experiencia:</strong> 5 years<br>
+            <strong>Expectativas:</strong> Full-time position<br>
+            <strong>Celular:</strong> 123-456-7890<br>
+            <strong>Email:</strong> john.doe@example.com
+        </p>
+    </div>
+    <div class="px-6 pt-4 pb-2">
+        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-2 custom-hire-btn"
+            onclick="openModal('¿Seguro que desea despedir a este empleado?')">Depedir</button>
+    </div>
+    </div>
+
+
+    <!-- Example Card -->
+    <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white custom-card" data-id="1"
+    data-name="John Doe">
+    <img class="w-full" src="https://via.placeholder.com/400x200" alt="Candidate image">
+    <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">John Doe</div>
+        <p class="text-gray-700 text-base">
+            <strong>Área:</strong> Web Development<br>
+            <strong>Experiencia:</strong> 5 years<br>
+            <strong>Expectativas:</strong> Full-time position<br>
+            <strong>Celular:</strong> 123-456-7890<br>
+            <strong>Email:</strong> john.doe@example.com
+        </p>
+    </div>
+    <div class="px-6 pt-4 pb-2">
+        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-2 custom-hire-btn"
+            onclick="openModal('¿Seguro que desea despedir a este empleado?')">Depedir</button>
+    </div>
+    </div>
+
+
+    <!-- Example Card -->
+    <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white custom-card" data-id="1"
+    data-name="John Doe">
+    <img class="w-full" src="https://via.placeholder.com/400x200" alt="Candidate image">
+    <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">John Doe</div>
+        <p class="text-gray-700 text-base">
+            <strong>Área:</strong> Web Development<br>
+            <strong>Experiencia:</strong> 5 years<br>
+            <strong>Expectativas:</strong> Full-time position<br>
+            <strong>Celular:</strong> 123-456-7890<br>
+            <strong>Email:</strong> john.doe@example.com
+        </p>
+    </div>
+    <div class="px-6 pt-4 pb-2">
+        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-2 custom-hire-btn"
+            onclick="openModal('¿Seguro que desea despedir a este empleado?')">Depedir</button>
+    </div>
+    </div>
+
+
+
+
+
+
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="customModal" class="custom-modal">
+            <div class="custom-modal-content">
+                <span class="custom-close" onclick="closeModal()">&times;</span>
+                <p id="customModalText">Action information goes here.</p>
+                <button id="customConfirmBtn"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Confirmar</button>
+            </div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="../js/incorporacion.js"></script>
+        <script>
+            function openModal(message) {
+                document.getElementById('customModalText').textContent = message;
+                document.getElementById('customModal').style.display = 'block';
+            }
+
+            function closeModal() {
+                document.getElementById('customModal').style.display = 'none';
+            }
+
+            document.getElementById('searchInput').addEventListener('input', function () {
+                var filter = this.value.toUpperCase();
+                var cards = document.querySelectorAll('.custom-card');
+
+                cards.forEach(function (card) {
+                    var id = card.getAttribute('data-id');
+                    var name = card.getAttribute('data-name').toUpperCase();
+                    if (id.includes(filter) || name.includes(filter)) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        </script>
+    </body>
+
+    </html>
